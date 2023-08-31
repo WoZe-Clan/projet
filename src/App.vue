@@ -1,15 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <HelloWorld />
+    <Homepage />
+     <!-- Ajoutez cette ligne -->
+    <!-- Reste de votre contenu -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
+import Homepage from './components/Homepage.vue';
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Homepage,
+    
   }
 }
 </script>
@@ -22,5 +30,19 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  
 }
+
+body {
+  background-color: #302E44;  /* Changez cette valeur pour la couleur de votre choix */
+}
+
+@media (max-width: 576px) {
+  #app{
+    margin-top: 0px;
+    
+  }
+}
+
+
 </style>
